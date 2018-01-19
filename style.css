@@ -1,0 +1,188 @@
+body {
+ width: 100%;
+ height: 100%;
+ position: fixed;
+ background: #CCCCCC;
+ margin: 0;
+ display: flex;
+ flex-wrap: wrap;
+ flex-direction: row;
+ align-content: space-around;
+ justify-content: space-between;
+}
+
+.item {
+  width: 50%;
+  display: flex;
+}
+/* ============================================================ */
+.box {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+.blue {
+  background-color: blue;
+  width: 66.7%;
+  height: 33.4%;
+  float: left;
+}
+.red {
+  background-color: red;
+  width: 33.3%;
+  height: 66.6%;
+  float: right;
+}
+.purple {
+  background-color: purple;
+  float: left;
+  width: 33.4%;
+  height: 66.6%;
+}
+.green {
+  background-color: green;
+  float: left;
+  width: 33.3%;
+  height: 33.2%;
+}
+.light-blue {
+  background-color: #33FFFF;
+  float: left;
+  width: 66.6%;
+  height: 33.4%;
+}
+/* ========================================================== */
+.box-1 {
+  width: 65%;
+  background-color: white;
+  margin: auto;
+  display: flex;
+}
+.box-1 div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: opacity 1.5s ease;
+  transition: .4s;
+  height: 45px;
+}
+.box-1 div span {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+.box-1 div:hover {
+  width: 130%;
+  transition: .4s;
+}
+.tab-1 {
+  background-color: blue;
+  width: 20%;
+}
+.tab-2 {
+  background-color: green;
+  width: 20%;
+}
+.tab-3 {
+  background-color: purple;
+  width: 20%;
+}
+.tab-4 {
+  background-color: orange;
+  width: 20%;
+}
+.tab-5 {
+  background-color: red;
+  width: 20%;
+}
+/* ============================================================== */
+
+.clock {
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  border:12px solid black;
+  margin: auto;
+  position:relative;
+}
+.hand {
+  position:absolute;
+  left:50%;
+  transform-origin:0% 100%;
+  /* border-radius:5px; */
+}
+
+.seconds {
+  width:10px;
+  height:100px;
+  background: blue;
+  animation: rota 60s steps(60, end) infinite;
+}
+
+@-webkit-keyframes rota {
+  from { transform:rotate(0deg); }
+  to { transform:rotate(360deg); }
+}
+
+@-moz-keyframes rota {
+  from { transform:rotate(0deg); }
+  to { transform:rotate(360deg); }
+}
+/* ====================================================================== */
+
+#pointer {
+  margin:auto;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  background-color: black;
+  background-image: url(redC.png);
+  background-position-x: 107px;
+  background-position-y: 103px;
+  background-size: 35px;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-repeat: no-repeat;
+}
+
+#pointer::before {
+  content: "";
+  background-image: url(whiteC.png);
+  background-position-x: -10px;
+  background-position-y: 35px;
+  background-size: initial;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0px;
+  right: -109px;
+  width: 181px;
+  height: 0px;
+  border-left: 43px solid black;
+  border-top: 42px solid transparent;
+  border-bottom: 150px solid transparent;
+  border-right: 35px solid transparent;
+}
+
+#pointer::after {
+ content: "";
+ position: absolute;
+ bottom: 0px;
+ right: -36px;
+ width: 0px;
+ height: 0px;
+ border-left: 36.5px solid black;
+ border-top: 77px solid transparent;
+ border-bottom: 73px solid transparent;
+ border-right: 0px solid yellow;
+}
+
+
